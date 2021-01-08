@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+.shoppies-logo {
+  width: 320px;
+  height: 61.03px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #004c3f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background-color: #fbf7ed;
+  padding: 64px 64px 0px 64px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  padding: 0px 64px 0px 64px;
+  background-color: #004c3f;
+  max-width: 100%;
+}
+
+#header-search {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+h1 {
+  margin-top: 0px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  color: #004c3f;
+  font-size: 56px;
+  line-height: 72px;
+  max-width: 50%;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #004c3f;
+  margin-top: 0px;
+}
+
+a {
+  color: #004c3f;
+}
+
+a:hover {
+  color: #008060;
+}
+
+#tagline {
+  font-size: 16px;
+  line-height: 18px;
+  color: #004c3f;
+  margin-top: 0px;
+  margin-left: 74px;
+}
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+  font-family: Work Sans;
+  color: #42474c;
+}
+
+label {
+  color: #42474c;
+  font-family: Work Sans;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 8px;
+}
+
+button {
+  background: #42474c;
+  border-radius: 4px;
   color: white;
+  padding: 8px;
+  max-height: 32px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled {
+  opacity: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#results-area {
+  background-color: white;
+  padding: 16px 16px 16px 16px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  width: 100%;
+  height: 480px;
+  box-sizing: border-box;
+}
+
+#movies-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+@media only screen and (max-width: 1160px) {
+  header {
+    padding: 32px 32px 16px 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    padding: 32px 32px 0px 32px;
+  }
+
+  #header-search {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+
+  #movies-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  header {
+    padding: 32px 16px 16px 16px;
+    background-color: #fbf7ed;
+  }
+
+  main {
+    padding: 32px 16px 16px 16px;
+    background-color: #004c3f;
+  }
+
+  #header-search {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  #movies-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .shoppies-logo {
+    width: 180px;
+    height: 37.62px;
+    margin-bottom: 0px;
+  }
+
+  h1 {
+    width: 352px;
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 100%;
+  }
+
+  #tagline {
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 40px;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  button:disabled {
+    opacity: 50%;
   }
 }

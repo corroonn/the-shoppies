@@ -1,0 +1,11 @@
+#movie-posters {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  gap: 8px;
+}
+
+#movie-posters img {
+  width: 100%;
+  max-width: 125px;
+}

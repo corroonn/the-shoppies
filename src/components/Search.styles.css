@@ -1,0 +1,41 @@
+input {
+  width: 480px;
+  margin-bottom: 16px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 16px;
+  padding: 32px 28px 32px 32px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: inset 0 0 0 1px #6b7177;
+  border-radius: 4px;
+  color: black;
+}
+
+input::placeholder {
+  color: rgba(66, 71, 76, 0.75);
+}
+
+#search-bar-label {
+  width: 480px;
+  margin-top: 16px;
+}
+
+input:focus {
+  box-shadow: inset 0 0 0 2px #004c3f;
+  /* inset 0 0 solid 4px #004c3f; */
+  outline: none;
+}
+
+@media only screen and (max-width: 420px) {
+  input {
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 16px 8px 16px 8px;
+  }
+
+  #search-bar-label {
+    width: 100%;
+  }
+}
