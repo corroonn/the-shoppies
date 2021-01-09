@@ -4,19 +4,19 @@ import "./Search.styles.css";
 export default function Search(props) {
   return (
     <div>
-      <div id="search-bar-label">
-        <input
-          name="search"
-          type="text"
-          placeholder="Search.."
-          onChange={props.searchFunction}
-        />
-        <br />
+      <form id="search-bar-label">
         <label htmlFor="search">
+          <input
+            name="search"
+            type="text"
+            placeholder="Search.."
+            onChange={props.searchFunction}
+          />
+          <br />
           Search for your favourite movies and add up to 5 to be selected for
           the nth annual Shoppies Award!
         </label>
-      </div>
+      </form>
     </div>
   );
 }
