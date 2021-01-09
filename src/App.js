@@ -21,14 +21,16 @@ class App extends React.Component {
 
   componentDidMount() {
     var movieSelection = JSON.parse(localStorage.getItem("selected"));
-    if (movieSelection !== null) {
+    var whichButtons = JSON.parse(localStorage.getItem("disabledButtons"));
+    if (movieSelection !== null && whichButtons !== null) {
       this.setState({
         selected: movieSelection,
+        disabledButtons: whichButtons,
       });
     }
 
     fetch(
-      "http://www.omdbapi.com/?s=%22die-hard%22&type=movie&r=json&apikey=c7648ad1"
+      "https://www.omdbapi.com/?s=%22die-hard%22&type=movie&r=json&apikey=c7648ad1"
     )
       .then((response) => response.json())
       .then((data) =>
@@ -45,7 +47,7 @@ class App extends React.Component {
     });
 
     fetch(
-      "http://www.omdbapi.com/?s=%22" +
+      "https://www.omdbapi.com/?s=%22" +
         searchText +
         "%22&type=movie&r=json&apikey=c7648ad1"
     )
@@ -97,6 +99,10 @@ class App extends React.Component {
 
   componentDidUpdate() {
     localStorage.setItem("selected", JSON.stringify(this.state.selected));
+    localStorage.setItem(
+      "disabledButtons",
+      JSON.stringify(this.state.disabledButtons)
+    );
   }
 
   render() {
